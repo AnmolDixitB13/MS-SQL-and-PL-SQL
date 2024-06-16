@@ -221,3 +221,9 @@ exec updateMember @ud_id, @updateOptionNo, @updateNewData, @updateFees output,
 @updateDisc_Per output, @updateFees_After_Disc output;
 
 select * from gym ;
+
+/*
+Future scope in this program:
+If the memnbership of a member is about to end, say a week before the membership expires,
+the user and the gym authorities should be prompted.
+*/
