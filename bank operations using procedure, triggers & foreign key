@@ -1,11 +1,13 @@
 ```sql
 
--- Write a program in SQL to perform banking operations - create a new account, update an account,
+-- Write a program in SQL to perform banking operations - debit/credit an account update an account,
 -- delete an account and read/fetch details such as balance of an account. All these operations as 
 -- mentioned should be written as a procedure. Use option no. to select which action has to be 
 -- performed among the options/tasks listed above, eg 1 will be for debitting an account, 2 will be 
 -- crediting money into an account... and so on. If the user enters wrong option no, it should display
--- invalid option no.
+-- invalid option no. The tasks/options mentioned above, I have implemented all of them in 1 procedure
+-- itself. Anyways, one can use more than 1 procedure i.e. 1 procedure for 1 task method also for 
+-- implementing it.
 --
 -- Include triggers which will be triggered when 
 -- 1. an account is created
@@ -81,7 +83,7 @@ select * from AccountsRecord ;
 end
 
 insert into AccountsRecord(Acc_no, name, openingBalance)  values(6666, 'iii', 9000) ;
-
+-- creating a new record
 
 
 --update AccountsRecord
