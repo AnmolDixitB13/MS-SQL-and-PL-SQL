@@ -1,4 +1,31 @@
-
+-- Write a program in SQL to perform banking operations - create a new account, update an account,
+-- delete an account and read/fetch details such as balance of an account. All these operations as 
+-- mentioned should be written as a procedure. Use option no. to select which action has to be 
+-- performed among the options/tasks listed above, eg 1 will be for debitting an account, 2 will be 
+-- crediting money into an account... and so on. If the user enters wrong option no, it should display
+-- invalid option no.
+--
+-- Include triggers which will be triggered when 
+-- 1. an account is created
+-- 2. an account is debited
+-- 3. an account is credited
+-- 4. an account is updated
+-- 5. an account is deleted
+--
+--
+-- Include 2 tables in this code: 
+-- 1. AccountsRecord which stores the account details such as acc. holder's name, opening balance,
+-- credit, debit amounts, final balance along with account no, which is the primary key.
+-- 2. TransactionList - every time a transaction like debiting or crediting of an account, updation
+-- and/or deletion of an account occurs, it will be stored in this table, via suitable triggers. Acc. 
+-- no. of the previous table will act as foreign key in this table.
+-- 
+-- Whenever bank procedure is called to perform operation like debit/credit/update/read/delete an 
+-- account, 1st verify whether the option no. entered is valid or not, then find whether the account
+-- no. provided is in AccountsRecord or not i.e. account exist or not. If the account exists, then
+-- verify that the name provided matches the name present in the AccountsRecord table at that account
+-- no. If yes, then proceed to execute the task via the procedure.
+-- 
 
 use mydb
 
