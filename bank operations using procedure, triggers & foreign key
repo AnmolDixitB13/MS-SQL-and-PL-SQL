@@ -1,3 +1,5 @@
+```sql
+
 -- Write a program in SQL to perform banking operations - create a new account, update an account,
 -- delete an account and read/fetch details such as balance of an account. All these operations as 
 -- mentioned should be written as a procedure. Use option no. to select which action has to be 
@@ -294,6 +296,8 @@ declare @option tinyint = 5,
 @Acc_no smallint = 6666,
 @nam varchar(20) = '200',   
 @datum varchar(20) = '200' ;
+
+```
 exec bank_operations @option , @Acc_no, @nam, @datum ;
 
 select * from AccountsRecord ;
