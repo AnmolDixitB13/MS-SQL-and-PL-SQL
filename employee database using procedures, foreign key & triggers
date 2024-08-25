@@ -13,7 +13,7 @@
 --
 -- 1. 3 types of employment are offered by the company - internship, part time & full time
 -- 2. Salary >= 0 i.e. non - negative
--- 3. Salary can't be 0 for part & full time employees
+-- 3. Salary can't be 0 for part & full time employees, for interns it can be 0
 -- 4. Default location is Mumbai
 
 
