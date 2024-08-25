@@ -16,6 +16,12 @@
 -- 3. Salary can't be 0 for part & full time employees
 -- 4. Default location is Mumbai
 
+
+-- Major concepts used in this program:
+-- Concept of procedures 
+-- Concept of triggers
+-- Concept of foreign key
+
 ------------------------------------------------------------------------------------------
 use mydb
 
@@ -701,6 +707,7 @@ end ;
 ------------------------------------------------------------------------------------------
 -- Future improvements possible in this code 
 
+1. 
 -- everywhere we are updating the details, it is better to use this
 -- if @@rowcount > 0
 -- print 'Employee detail updation successful'
@@ -711,5 +718,6 @@ end ;
 -- control, the detail was unable to be updated by SQL, so it should be highlighted to us. Only
 -- when the updation is successful, it should print updation successful, and not otherwise
 
+2.
 -- more data fields can be included into the emp_official and emp_personal tables such as blood group,
 -- medical history, handicap/specially abled status, PF/EPF to opt/not to opt, etc.
