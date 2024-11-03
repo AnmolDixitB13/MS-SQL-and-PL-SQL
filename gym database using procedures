@@ -222,8 +222,14 @@ exec updateMember @ud_id, @updateOptionNo, @updateNewData, @updateFees output,
 
 select * from gym ;
 
-/*
-Future scope in this program:
-If the memnbership of a member is about to end, say a week before the membership expires,
-the user and the gym authorities should be prompted.
-*/
+
+-- Future scope / improvements in this program:
+-- 
+-- 1. If the memnbership of a member is about to end, say a week before the membership expires,
+-- the user and the gym authorities should be prompted.
+-- 
+-- 2. Suitable try - catch constructs can be implemented at all the necessary places. This will ensure
+-- that the program becomes more robust in terms of error / exception handling.
+-- 
+-- 3. Data validation at the time of account creation i.e. name, phone number, email id, etc are 
+-- appropriate or not
