@@ -721,3 +721,11 @@ end ;
 2.
 -- more data fields can be included into the emp_official and emp_personal tables such as blood group,
 -- medical history, handicap/specially abled status, PF/EPF to opt/not to opt, etc.
+
+3.
+-- Suitable try - catch constructs can be implemented at all the necessary places. This will make
+-- the program more robust in terms of error / exception handling.
+
+4.
+-- Data validation at the time of record creation i.e. name, phone number, email id, etc are 
+-- appropriate or not
