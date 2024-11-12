@@ -5,8 +5,6 @@ ServicesApplied will contain services/government schemes for people have applied
 & unique identification no. are linked & registered in the previous table i.e. Beneficiaries can avail services.
 */
 
-```sql
-
 use mydb
 
 create table Beneficiaries(
@@ -80,6 +78,7 @@ exec EnterRecords 1111, 'aaa bbb', 'scheme5'
 select * from Beneficiaries
 select * from ServicesApplied
 
+-----------------------------------------------------
 /*
 this is a relatively simpler version of the procedure that I had initially developed, but later modified
 it & used the modified one as the final procedure for my code.
@@ -106,5 +105,3 @@ print 'Invalid name/name mismatch.'
 end
 
 */
-
-```
