@@ -226,7 +226,8 @@ select * from gym ;
 -- Future scope / improvements in this program:
 -- 
 -- 1. If the memnbership of a member is about to end, say a week before the membership expires,
--- the user and the gym authorities should be prompted.
+-- the user and the gym authorities should be prompted. Eg, user should be prompted by a mail on his / her
+-- registered email id and the gym owner / gym branch staff should be notified using suitable notifications.
 -- 
 -- 2. Suitable try - catch constructs can be implemented at all the necessary places. This will ensure
 -- that the program becomes more robust in terms of error / exception handling.
