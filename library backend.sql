@@ -72,33 +72,45 @@ Procedures / standard steps for the following tasks:
 	and today's day, is more than 15 days, charge fine suitably.
 	iii. The member can either pay the fine at the time of returning book itself or later. In the 
 	latter, the fine will be added in the library member's library account.
-	iv. Decrease the no. of books borrowed by the library member by 1.
-	v. Increase the no. of copies of this books available for lending by 1.
+	iv. Since the member has returned the book back to library, transfer the book issue history
+	to another table suitably as the book has been returned back to the library and book status
+	will be 'returned'.
+	v. Decrease the no. of books borrowed by the library member by 1.
+	vi. Increase the no. of copies of this books available for lending by 1.
 
 5. Reporting lost book
-	i. 
-	ii. 
-	iii. 
-	iv. 
-	v. 
+	i. Check in library records [i.e. in suitable table] whether member with member id m_id 
+	has borrowed book with book id b_id
+	ii. If yes, then shift this record from BooksIssuedToStudent table to BookIssueHistory
+	wherein the status of the book will be 'lost'.
+	iii. Add a new entry into the table, BooksLostByStudent and add the details.
+	iv. Decrease the no. of books borrowed by the library member by 1.
+	v. Fine member suitably.
 
 6. Returning lost book
-	i. 
-	ii. 
-	iii. 
-	iv. 
-	v. 
+	i. Check whether the library member with member id m_id had lost book with book id b_id.
+	ii. If yes, then change the book status to 'found and returned' in BookIssueHistory
+	iii. Increase the no. of copies of this books available for lending by 1.
+	iv. Update date at which the book was returned back to library in BookIssueHistory table.
+	v. Process refund if the member had paid the lost fine. If the fine was not paid, refund
+	should not be initiated. It will be initiated only once the member pays the book lost fine.
+	vi. Update details suitably in the BooksLostByStudent table [date on which it was returned,
+ 	book status and other comments if any]
 
-4. If a member does not return / gets the book re - issued within 15 days, starting from the date 
-he / she borrowed it, suitable fine will be charged.
-5. The member can pay the fine while returning / re - issuing the book or later
-6. When a book is lost, suitable fine will be charged. If the book is found and returned back to
+
+When a book is lost, suitable fine will be charged. If the book is found and returned back to
 library, if the member had paid the lost book fine previously, his / her 80 / 90 % lost fine will
 be refunded back. If the member had not paid the lost fine previously and returns the lost book, no 
 refund will be made in this case. If such a person later pays the lost book fine, money will be 
 refunded later.
 
-
+List of table made for the program:
+1. from Books	-- list of books registered in library
+2. from Members	-- list of registered members
+3. from BooksIssuedToStudent	-- books that have been issued to the members, not yet returned
+4. from BookIssueHistory	-- books that were previously issued to the members, that were returned or lost or lost and found later
+5. from BooksLostByStudent	-- list of members who misplaced book(s)
+6. from LibraryFundCollection	-- record of fines collected
 */
 
 ----------------------------------------------------------------------------
