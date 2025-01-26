@@ -1,8 +1,28 @@
 /*
 
-An sql backend for a B. Tech college library. 
+An sql backend for a B. Tech college library. There are students of 4 academic years in the college - 
+1st, 2nd, 3rd and 4th. Students must first complete all the formalities, become library members and 
+then they can avail library services, such as book borrowing and so on.
 
 The following tasks are to be performed:
+1. CRUD - Books
+	i. Add new book to the library shelf
+	ii.
+	iii.
+	iv.
+
+2. CRUD - Members
+	i.
+	ii.
+	iii.
+	iv.
+
+3. Other Library Operations
+	i.
+	ii.
+	iii.
+	iv.
+
 
 
 space for question
