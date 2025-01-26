@@ -7,29 +7,55 @@ then they can avail library services, such as book borrowing and so on.
 The following tasks are to be performed:
 1. CRUD - Books
 	i. Add new book to the library shelf
-	ii.
-	iii.
-	iv.
+	ii. Read details about a book, i.e. no. of copies available on shelf, etc
+	iii. Update book details by the book id
+	iv. Delete a book by the book id
 
 2. CRUD - Members
-	i.
-	ii.
-	iii.
-	iv.
+	i. Add / Register a new member to the library
+	ii. Read details about a member / members, such as members who have borrowed atleast 1 book, 
+	members who have pending fines, etc.
+	iii. Update member details by their member id
+	iv. Delete a member by their member id
 
 3. Other Library Operations
-	i.
-	ii.
-	iii.
-	iv.
+	i. Borrow book / issue book
+	ii. Re - issue book
+	iii. Return book
+	iv. Report lost book
+	v. Return lost book when found
 
 
+Constraints:
+1. Book id's and Member id's must be unique for each book / member respectively.
+2. Students of 1st and 2nd year can borrow utmost 3 books whereas students of 3rd and 4th year can
+borrow utmost 5 books
+3. A member cannot borrow multiple copies of the same book
 
-space for question
 
-constraints, like max books that can be borrowed
+Procedures:
+Adding new book / member
 
-basic proc for lending, returning...
+Issuing book to the member
+
+Re - issuing book to the member
+
+Returning book
+
+Reporting lost book
+
+Returning lost book
+
+4. If a member does not return / gets the book re - issued within 15 days, starting from the date 
+he / she borrowed it, suitable fine will be charged.
+5. The member can pay the fine while returning / re - issuing the book or later
+6. When a book is lost, suitable fine will be charged. If the book is found and returned back to
+library, if the member had paid the lost book fine previously, his / her 80 / 90 % lost fine will
+be refunded back. If the member had not paid the lost fine previously and returns the lost book, no 
+refund will be made in this case. If such a person later pays the lost book fine, money will be 
+refunded later.
+
+
 */
 
 ----------------------------------------------------------------------------
