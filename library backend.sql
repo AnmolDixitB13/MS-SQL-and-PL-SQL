@@ -33,18 +33,54 @@ borrow utmost 5 books
 3. A member cannot borrow multiple copies of the same book
 
 
-Procedures:
-Adding new book / member
+Procedures / standard steps for the following tasks:
 
-Issuing book to the member
+1. Adding new book / member
+	i. Check whether the book with the entered book id is present in the library books record or not
+	ii. If not, then add the book to the records, else display the message that book with this book
+	id already exists into the library records.
+	iii. In case of having to add a new member, use member id instead of book id and follow 
+	steps i and ii.
 
-Re - issuing book to the member
+2. Issuing book to the member
+	i. Check whether the entered book id is valid [ registered ]
+	ii. Check whether are there copies of this book available in the library for lending
+	iii. Check whether the entered member id is valid [ registered ]
+	iv. Check member details. If the member has already taken / has bee issued maximum number of
+	permissible books (i.e. 3 for 1st, 2nd year and 5 for 3rd, 4th year), he / she can't be issued
+	more books.
+	v. Issue book.
+	vi. Add data to the suitable tables.
+	vii. Decrease book available on shelf count by 1.
+	viii. Increase books borrowed count by 1 for the member.
 
-Returning book
+3. Re - issuing book to the member
+	i. 
+	ii. 
+	iii. 
+	iv. 
+	v. 
 
-Reporting lost book
+4. Returning book
+	i. 
+	ii. 
+	iii. 
+	iv. 
+	v. 
 
-Returning lost book
+5. Reporting lost book
+	i. 
+	ii. 
+	iii. 
+	iv. 
+	v. 
+
+6. Returning lost book
+	i. 
+	ii. 
+	iii. 
+	iv. 
+	v. 
 
 4. If a member does not return / gets the book re - issued within 15 days, starting from the date 
 he / she borrowed it, suitable fine will be charged.
