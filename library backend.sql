@@ -51,15 +51,19 @@ Procedures / standard steps for the following tasks:
 	more books.
 	v. Issue book.
 	vi. Add data to the suitable tables.
-	vii. Decrease book available on shelf count by 1.
-	viii. Increase books borrowed count by 1 for the member.
+	vii. Decrease the copies of the book available on shelf count by 1.
+	viii. Increase books borrowed count by 1 for this member.
 
 3. Re - issuing book to the member
-	i. 
-	ii. 
-	iii. 
-	iv. 
-	v. 
+	i. Check in library records [i.e. in suitable table] whether member with member id m_id 
+	has borrowed book with book id b_id
+	ii. If yes, change date issued to today's date
+	iii. Set status_reissued column to 'y' or 'yes' suitably.
+	iv. If the gap between previous book issue and this re - issuing is more than 15 days, charge
+	fine suitable
+	v. The member can either pay the fine at the time of re - issuing itself or later. In the 
+	latter, the fine will be added in their library account.
+
 
 4. Returning book
 	i. 
