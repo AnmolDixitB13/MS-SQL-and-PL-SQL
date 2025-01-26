@@ -105,12 +105,12 @@ refund will be made in this case. If such a person later pays the lost book fine
 refunded later.
 
 List of table made for the program:
-1. from Books	-- list of books registered in library
-2. from Members	-- list of registered members
-3. from BooksIssuedToStudent	-- books that have been issued to the members, not yet returned
-4. from BookIssueHistory	-- books that were previously issued to the members, that were returned or lost or lost and found later
-5. from BooksLostByStudent	-- list of members who misplaced book(s)
-6. from LibraryFundCollection	-- record of fines collected
+1. Books	-- list of books registered in library
+2. Members	-- list of registered members
+3. BooksIssuedToStudent	-- books that have been issued to the members, not yet returned
+4. BookIssueHistory	-- books that were previously issued to the members, that were returned or lost or lost and found later
+5. BooksLostByStudent	-- list of members who misplaced book(s)
+6. LibraryFundCollection	-- record of fines collected
 */
 
 ----------------------------------------------------------------------------
