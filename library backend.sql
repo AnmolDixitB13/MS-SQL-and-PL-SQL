@@ -1,5 +1,4 @@
 /*
-
 An sql backend for a B. Tech college library. There are students of 4 academic years in the college - 
 1st, 2nd, 3rd and 4th. Students must first complete all the formalities, become library members and 
 then they can avail library services, such as book borrowing and so on.
