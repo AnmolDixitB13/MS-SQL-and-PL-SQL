@@ -1,4 +1,10 @@
 /*
+
+An sql backend for a B. Tech college library. 
+
+The following tasks are to be performed:
+
+
 space for question
 
 constraints, like max books that can be borrowed
@@ -176,7 +182,7 @@ select * from LibraryFundCollection
 -----------------------------------------------------------
 -- Procedures
 
--- read, delete books
+-- read, delete books related info
 -- proc 1
 
 create or alter procedure RD_Books
@@ -313,7 +319,7 @@ declare
 exec RD_Books @inp1, @data1 ;
 
 ------------------------------
--- add books
+-- add books into the library shelf
 -- proc 2
 -- id, name, author, qty
 
@@ -394,7 +400,7 @@ declare
 
 exec UPD_Books @inp3, @b_id3, @data3 ;
 ------------------------------
--- read members
+-- read library members' details
 -- proc 4
 
 create or alter procedure Read_Members
@@ -481,7 +487,7 @@ declare
 exec Read_Members @inp4, @data4 ;
 
 ------------------------------
--- add, delete members
+-- add new member, delete existing library members
 -- proc 5
 -- id, name, year, fine
 
@@ -1171,107 +1177,24 @@ exec Book_Lost_Found @inp10, @b_id10, @m_id10, @reason10, @comments10, @amt_coll
 -- library where b_id = @b_id & m_id = @m_id
 
 -----------------------------------------------------------
-SELECT * 
-FROM sys.triggers 
-WHERE name = 'trig_cad_operation';
 
-
-SELECT * 
-FROM sys.database_principals 
-WHERE name = USER_NAME();
-
-
-
-/*
-
-DROP TRIGGER IF EXISTS dbo.trig_cad_operation;
-
-create or alter trigger trig_cad_operation
-on database
-for create_table, alter_table, drop_table
-as begin
-	print 'Table structure cannot be modified without necessary permissions or by unauthorized individuals' ;
-	rollback transaction
-end ;
-
-enable trigger trig_cad_operations on database ;
-
-disable trigger trig_cad_operations on database ;
-
-
--- This trigger ensures that once the application is developed and deployed at the customer side, no one, 
--- either by mistake or intentionally modifies the database structure and / or the tables associated with
--- the database.
-*/
-
-/*
--- Count of books borrowed by each student along with the book names
-select 
-    b.m_id, 
-    b.b_name,
-    count(*) as BooksIssued
-from BooksIssuedToStudent b
-join Books bo on b.b_id = bo.b_id  -- join to get the book names
-group by b.m_id, bo.b_name
-
-union all
-
--- Total count of books borrowed by all students
-select 
-    'Total' as m_id, 
-    'All Books' as b_name, 
-    count(*) as BooksIssued
-from BooksIssuedToStudent;
-
-IF NOT EXISTS (SELECT * FROM table WHERE condition)
-BEGIN
-    PRINT 'There are no rows for this query';
-END
-ELSE
-BEGIN
-    SELECT * FROM table WHERE condition;
-END
-
-
-
-SELECT * 
-FROM Members m
-WHERE EXISTS (SELECT 1 FROM BooksIssuedToStudent b WHERE b.m_id = m.m_id)
-   OR EXISTS (SELECT 1 FROM BookIssueHistory h WHERE h.m_id = m.m_id);
-
-
-
-*/
 
 /*
 Caution: 
 
-1. In procedures, if select statements have to be used, use if - else instead
-of case - when - then because select cannot be used with case - when - then
-directly.
+1. In procedures, if select statements have to be used, use if - else instead of 
+case - when - then because select cannot be used with case - when - then directly.
 
 2. use = instead of == while comparing values, as in if else statement.
 */
 
-/*
-Future scope / improvements:
-
-1. mail / message 3 days before the book issue period expires
-
-2. try catch
-
-3. dtl i.e. commit rollback can be included at other places as needed
-*/
 
 /*
 Future scope / improvements in this program:
 
-Mail and / or message students / member 2 days before book issue period 
-about to expire
+1. Mail and / or message students / member 2 days before book issue period is about to expire
 
-implement try catch blocks if needed
+2. Implement try catch blocks if needed
 
-include commit rollback as and where needed
-
-
+3. Include commit rollback as and where needed
 */
