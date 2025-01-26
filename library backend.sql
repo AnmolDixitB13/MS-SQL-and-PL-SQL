@@ -104,7 +104,7 @@ be refunded back. If the member had not paid the lost fine previously and return
 refund will be made in this case. If such a person later pays the lost book fine, money will be 
 refunded later.
 
-List of table made for the program:
+List of tables made for this program:
 1. Books	-- list of books registered in library
 2. Members	-- list of registered members
 3. BooksIssuedToStudent	-- books that have been issued to the members, not yet returned
