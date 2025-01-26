@@ -1292,9 +1292,17 @@ case - when - then because select cannot be used with case - when - then directl
 /*
 Future scope / improvements in this program:
 
-1. Mail and / or message students / member 2 days before book issue period is about to expire
+1. Mail and / or message students / members 2 days before book issue period is about to expire
 
 2. Implement try catch blocks if needed
 
 3. Include commit rollback as and where needed
+
+4. An additional functionality can be added [ which I forgot to do ]:
+In procedure UPD_Members (to update member details), when the fine update option is selected to clear
+the pending fine, this record should be inserted into the table LibraryFundCollection table.
+
+Similarly, even while returning book, in procedure Book_Return, when the member decides to pay the 
+fine at that time itself, [ which is done using the same procedure Book_Return], this transaction 
+should also be entered in the LibraryFundCollection table.
 */
