@@ -62,15 +62,18 @@ Procedures / standard steps for the following tasks:
 	iv. If the gap between previous book issue and this re - issuing is more than 15 days, charge
 	fine suitable
 	v. The member can either pay the fine at the time of re - issuing itself or later. In the 
-	latter, the fine will be added in their library account.
+	latter, the fine will be added in the library member's library account.
 
 
 4. Returning book
-	i. 
-	ii. 
-	iii. 
-	iv. 
-	v. 
+	i. Check in library records [i.e. in suitable table] whether member with member id m_id 
+	has borrowed book with book id b_id
+	ii. If yes, if the gap i.e. no. of days between previous book issue / re - issue of this book
+	and today's day, is more than 15 days, charge fine suitably.
+	iii. The member can either pay the fine at the time of returning book itself or later. In the 
+	latter, the fine will be added in the library member's library account.
+	iv. Decrease the no. of books borrowed by the library member by 1.
+	v. Increase the no. of copies of this books available for lending by 1.
 
 5. Reporting lost book
 	i. 
